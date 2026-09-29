@@ -76,7 +76,7 @@ export function Projects() {
       <div className="col">
         <Reveal as="p" i={0} className="kick">Projects</Reveal>
         <Reveal as="h2" i={1}>Work as Full Stack Developer.</Reveal>
-        <Reveal as="p" i={2}>The shape on the left is describing who i am </Reveal>
+        <Reveal as="p" i={2}>This is the project that i have worked on.</Reveal>
         <Reveal i={3} className="legend">
           {Object.values(layers).map((l) => (
             <span key={l.label}><i style={{ background: l.color }} />{l.label}</span>
@@ -84,7 +84,8 @@ export function Projects() {
         </Reveal>
         <div className="proj">
           {projects.map((p, k) => (
-            <Reveal as="a" className="card" href={p.href} i={4 + k} key={p.name}>
+            // Cards with a live link can't be an <a> themselves (no nested links), so they get a CTA row instead.
+            <Reveal as={p.link ? 'div' : 'a'} className="card" href={p.link ? undefined : p.href} i={4 + k} key={p.name}>
               <h3>{p.name} <span>{p.type}</span></h3>
               <p>{p.text}</p>
               <div className="tags">
@@ -95,6 +96,14 @@ export function Projects() {
                   );
                 })}
               </div>
+              {p.link && (
+                <div className="live">
+                  <span className="live-url">{new URL(p.link).host}</span>
+                  <a className="btn p sm" href={p.link} target="_blank" rel="noreferrer">
+                    Visit live site <Icon name="arrow" />
+                  </a>
+                </div>
+              )}
             </Reveal>
           ))}
         </div>

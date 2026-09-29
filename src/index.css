@@ -98,6 +98,11 @@ section.c .btns { justify-content: center; }
 .tags span { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.06); color: #cfcbe6; border: 1px solid transparent; }
 .tags span.on { background: color-mix(in srgb, var(--c) 14%, transparent); border-color: color-mix(in srgb, var(--c) 45%, transparent); }
 .tags span.on::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 1px; }
+.live { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.live-url { font-size: 13px; color: var(--muted); }
+.btn.sm { padding: 8px 16px; font-size: 13.5px; gap: 6px; }
+.btn svg { width: 14px; height: 14px; fill: currentColor; transition: transform 0.25s; }
+.btn:hover svg { transform: translate(2px, -2px); }
 .legend { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-top: 4px; }
 .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
 

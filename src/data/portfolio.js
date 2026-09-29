@@ -43,7 +43,7 @@ export const experience = [
   {
     when: 'Graduating in November 2026',
     title: 'Degree Holders',
-    text: "Bachelor's at Management and Science University, Shah Alam.",
+    text: "Bachelor's in Computer Science & Technology at Management & Science University (MSU), Malaysia.",
   },
 ];
 
@@ -74,11 +74,11 @@ export const tagLayer = {
 
 export const projects = [
   {
-    name: 'CodeBridge Courses',
+    name: 'CodeBridge Courses(LMS)',
     type: 'Internship Project',
     text: 'A learning platform with separate dashboards for students and trainers, redesigned around a clean sidebar layout.',
     tags: ['React', 'Node.js', 'UI design'],
-    href: '#contact', // TODO: live demo or GitHub link
+    link: 'https://courses.codebridge.app/', // adds a "Visit live site" button to the card
   },
   {
     name: 'E-Commerce Web App',
