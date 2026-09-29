@@ -76,7 +76,7 @@ export function Projects() {
       <div className="col">
         <Reveal as="p" i={0} className="kick">Projects</Reveal>
         <Reveal as="h2" i={1}>Work as Full Stack Developer.</Reveal>
-        <Reveal as="p" i={2}>This is the project that i have worked on.</Reveal>
+        <Reveal as="p" i={2}>These are the projects that I have worked on.</Reveal>
         <Reveal i={3} className="legend">
           {Object.values(layers).map((l) => (
             <span key={l.label}><i style={{ background: l.color }} />{l.label}</span>
